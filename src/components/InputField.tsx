@@ -1,15 +1,14 @@
-"use client";
-
 interface InputFieldProps {
     value: string;
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     placeholder: string;
+    type?: string;
 }
 
-const InputField = ({ value, onChange, placeholder }: InputFieldProps) => {
+const InputField = ({ value, onChange, placeholder, type = "text" }: InputFieldProps) => {
     return (
         <input
-            type="text"
+            type={type}
             value={value}
             onChange={onChange}
             placeholder={placeholder}
