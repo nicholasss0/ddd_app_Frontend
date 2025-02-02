@@ -3,6 +3,7 @@
 import { useState } from "react";
 import InputField from "./InputField";
 import Button from "./Button";
+import axios from "axios";
 
 interface FormProps {
     setResult: (result: string | null) => void;
@@ -23,8 +24,8 @@ const Form = ({ setResult, setError }: FormProps) => {
         }
 
         try {
-            const response = await fetch(`http://127.0.0.1:3003/region/${phoneNumber}`);
-            const data = await response.json();
+            const response = await axios.get(`http://127.0.0.1:3003/region/${phoneNumber}`);
+            const data = response.data;
 
             if (data && data.region) {
                 setResult(`DDD ${data.ddd}: ${data.region}`);
