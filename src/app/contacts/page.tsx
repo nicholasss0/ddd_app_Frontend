@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { useContacts } from "@/context/ContactsContext";
 import Link from "next/link";
-import Button from "@/components/Button";
 import DeleteButton from "@/components/DeleteButton";
 import FavoriteButton from "@/components/FavoriteButton";
 
