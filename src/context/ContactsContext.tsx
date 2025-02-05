@@ -31,7 +31,7 @@ export const ContactsProvider = ({ children }: { children: React.ReactNode }) =>
 
     const addContact = async ({ name, phone, address }: Omit<Contact, "region" | "isFavorite">) => {
         try {
-            const response = await fetch(`http://127.0.0.1:3003/region/${phone}`);
+            const response = await fetch(`https://minidddapi.onrender.com/region/${phone}`);
             const data = await response.json();
 
             if (!data.region) {
