@@ -28,7 +28,6 @@ Este projeto consiste em uma **Agenda de Contatos** desenvolvida com **Next.js (
 ## Tecnologias Utilizadas
 - **Frontend:** Next.js, TypeScript, TailwindCSS
 - **Backend:** FastAPI, Uvicorn
-- **Banco de Dados:** SQLite (armazenamento local de contatos)
 - **Hospedagem:** Render (tanto API quanto frontend)
 
 ---
